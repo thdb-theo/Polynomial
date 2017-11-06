@@ -1,6 +1,6 @@
 # Polynomials 0.1
 
-Support of Polynomial of degrees > 100. Supports root-finding, derivative and more.
+Support of Polynomial of degrees up to 100. Supports root-finding, derivative and more.
 
 Plotting requires that matplotlib and numpy are installed.
 
