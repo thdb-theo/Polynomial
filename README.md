@@ -1,22 +1,31 @@
-# Polynomials 0.1
+# Polynomials 0.2
 
 Support of Polynomial of degrees up to 100. Supports root-finding, derivative and more.
 
+Also includes an app which supports plotting, roots finding, factorisation and derivatives
+
+Rational functions are also supported
+
 Plotting requires that matplotlib and numpy are installed.
+
+The app requires PyQT4
 
 Features:
 
 * Roots
-* nth derivative
+* Nth derivative
 * Tangents
 * Inflection points and inflection tangents
 * Plotting
 * Factorisation
 * Addition and subtraction
 * Multiplication and division (including polynomial division)
-* Power of positive integers
+* Power to positive integers
 * Extremes
 * Limit
+* Integrals
+* Rational functions
+* Asymptotes
 
 Thanks to:
 

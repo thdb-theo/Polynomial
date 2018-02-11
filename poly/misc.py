@@ -56,8 +56,8 @@ def iszero(x, e=1e-7):
     return isclose(abs(x), 0.0, abs_tol=e)
 
 
-def is_quite_close(x, y, e=0.1):
-    return isclose(x, y, abs_tol=e)
+# def is_quite_close(x, y, e=0.1):
+#     return isclose(x, y, abs_tol=e)
 
 
 def filter_near0imag(x):
@@ -91,7 +91,6 @@ def round_floating_point_error(x):
         return complex(round_floating_point_error(x.real),
                        round_floating_point_error(x.imag))
     if isinstance(x, str):
-        print(x)
         raise ValueError
     a = round(x, 5)
     if a % 0.5 == 0:
@@ -100,29 +99,14 @@ def round_floating_point_error(x):
         return x
 
 
-def reverseenum(seq, start=None):
-    """Reversed enumerate
-    if i is None and x is a generator the generator is made into a
-    list to find len and then looped through again
-    Params:
-    ---------
-    seq: An iterable
-    start: the start of the numeration
-    """
-    if start is None:
-        if isinstance(seq, GeneratorType):
-            seq = list(seq)
-        start = len(seq)
-    for n in seq:
-        yield start, n
-        start -= 1
-
-
 def sign(x):
     return (x > 0) - (x < 0)
+
+
+def int_if_mod1(n):
+    return round(n) if iszero(n % 1) else n
 
 
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    print(sign(0))

@@ -12,13 +12,21 @@ http://danielhomola.com/2016/02/09/newtons-method-with-10-lines-of-python/
 __version__ = 0.1
 
 import sys
+from math import *
 
 from polynomial import Polynomial, plot, alphabet
+from rational import Rational
 
 cmdargs = sys.argv[1:]
 
 P = Polynomial
 poly = Polynomial
+R = Rational
 
 if __name__ == '__main__':
-    f = P(*map(float, cmdargs))
+    global f
+    if '/' in cmdargs:
+        args = ''.join(cmdargs).split('/')
+        f = R(P(*map(float, args[0])), P(*map(float, args[1])))
+    else:
+        f = P(*map(float, cmdargs))
